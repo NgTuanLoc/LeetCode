@@ -6,6 +6,24 @@ namespace SequencesTest
     public class SequencesTest
     {
         [Fact]
+        public void TwoSumTest()
+        {
+            // Arrange
+            var test = new int[] { 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 7, 1, 1, 1, 1, 1 };
+            var test1 = new int[] { 3, 2, 4 };
+            var test2 = new int[] { 3, 3 };
+
+            // Act
+            var result = SolutionSequences.TwoSum(test, 11);
+            var result1 = SolutionSequences.TwoSum(test1, 6);
+            var result2 = SolutionSequences.TwoSum(test2, 6);
+
+            // Assert
+            result.Should().Equal(new int[] { 0, 1 });
+            result1.Should().Equal(new int[] { 1, 2 });
+            result2.Should().Equal(new int[] { 0, 1 });
+        }
+        [Fact]
         public void MaxProductSubArrayTest()
         {
             // Arrange

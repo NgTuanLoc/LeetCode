@@ -4,6 +4,20 @@ namespace solution.Sequences
     {
         public static int[] TwoSum(int[] nums, int target)
         {
+            // https://leetcode.com/problems/two-sum/
+            var table = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (table.ContainsKey(nums[i]))
+                {
+                    return new int[] { table[nums[i]], i };
+                }
+                else if (!table.ContainsKey(target - nums[i]))
+                {
+                    table.Add(target - nums[i], i);
+                }
+            }
             return nums;
         }
         public static int MaxProductSubArray(int[] nums)
