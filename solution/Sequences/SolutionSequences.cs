@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Runtime.InteropServices;
-using System.Security.AccessControl;
 
 namespace solution.Sequences
 {
@@ -161,12 +159,6 @@ namespace solution.Sequences
                 result[i] *= temp;
                 temp *= nums[i];
             }
-
-            return result;
-        }
-        public static List<List<int>> ThreeSum(int[] nums)
-        {
-            List<List<int>> result = new();
 
             return result;
         }
